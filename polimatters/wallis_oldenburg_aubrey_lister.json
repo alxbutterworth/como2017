@@ -1,0 +1,26 @@
+[
+	{
+		"oldenburg": 3,
+		"lister": 6,
+		"keyword": "unknown name",
+		"aubrey": 0,
+		"tot": 64,
+		"wallis": 61
+	},
+	{
+		"oldenburg": 1,
+		"lister": 0,
+		"keyword": "Thynne, Thomas",
+		"aubrey": 0,
+		"tot": 1,
+		"wallis": 0
+	},
+	{
+		"oldenburg": 0,
+		"lister": 1,
+		"keyword": "Sterne, Richard Dr",
+		"aubrey": 0,
+		"tot": 0,
+		"wallis": 0
+	}
+]
