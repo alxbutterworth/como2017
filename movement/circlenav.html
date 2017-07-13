@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		rect, circle, ellipse, path, polygon, polyline {
+			fill: none;
+			stroke: rgb(0,0,0);
+		}
+		body { background-color: white;}
+		circle.main {
+			stroke: #aaa
+		}
+		circle.choice {
+			fill: #ffe347;
+			stroke: #b4a137;
+			stroke-width:0.5
+		}
+		circle.over {
+			fill: blue;
+		}
+		circle.selected {
+			fill: green;
+		}
+		circle.over.selected {
+			fill: #5f5;
+		}
+	</style>
+</head>
+<body>
+<div id="chart"></div>
+<script src="lib/d3.min.js"></script>
+<script src="js/circlenav.js"></script> <!-- CHANGE NAME -->
+<script>
+	// Get Data
+	var dummyDataNumber = 10,
+		data = [];
+
+	for( var i = 0, iEnd = dummyDataNumber; i < iEnd; i++ ) {
+		data.push({
+			id: i,
+			name: "Choice " + i,
+			size: Math.random() * 30 + 10
+		})
+	}
+
+	// Create a space for chart
+	var select = "#chart";
+	var div = d3.select( select ) // Change size
+			//.attr("height", "100%") // Cannot set a height of 100%, you need values
+			.attr("width", "100%"),
+			svgWidth = div[0][0].clientWidth,
+			svgHeight = 800;
+
+	// Configuration for chart
+	var config = {
+		select: select,
+		width: svgWidth,
+		height: svgHeight
+	};
+
+	// Chart create
+	var control = chart.create( data, config );
+</script>
+</body>
+</html>
